@@ -19,7 +19,7 @@ body {
 }
 
 .memory-card {
-    width: calc(25% - 10px);
+    width: calc(33% - 10px);
     height: 33%;
     margin: 5px;
     transform-style: preserve-3d;

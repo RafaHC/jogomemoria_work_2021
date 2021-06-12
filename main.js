@@ -68,7 +68,7 @@ function contabilizarAcertos() {
         if (jogador.jogar) jogador.acertos += 1;
     });
 
-    document.getElementById('resultado').innerHTML = `<br><h2>Resultado do Jogo: ${jogadores[0].nome} - ${jogadores[0].acertos} X ${jogadores[1].nome} - ${jogadores[1].acertos}  </h2>`;
+    document.getElementById('resultado').innerHTML = `<br><h3>Resultado do Jogo: ${jogadores[0].nome} - ${jogadores[0].acertos} X ${jogadores[1].nome} - ${jogadores[1].acertos}  </h3>`;
 }
 
 function contabilizarErros() {
