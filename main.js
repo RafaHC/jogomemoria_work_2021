@@ -118,12 +118,27 @@ function montarJogo() {
 
 function desenharJogo(imgs) {
     let cardHTML = "";
+    
+    let arrayJogoEmbaralhado = [];
+    imgs.forEach(img => {
+        arrayJogoEmbaralhado.push(img);
+    });
 
     imgs.forEach(img => {
-        cardHTML += `<div class="memory-card" data-card="${img}">
-      <img class="front-face" src="img/${img}"/>
-      <img class="back-face" src="img/cosmeticos.jpg">
-    </div>`;
+        arrayJogoEmbaralhado.push(img);
     });
-    return cardHTML + cardHTML + `<div id='resultado'></div>`;
+
+    imgs = embaralhar(arrayJogoEmbaralhado);
+
+    imgs.forEach((img) => {
+            cardHTML += 
+            `<div class="memory-card" data-card="${img}">
+              <img class="front-face" src="img/${img}"/>
+              <img class="back-face" src="img/cosmeticos.jpg">
+            </div>`;
+    })
+
+    
+  
+    return cardHTML + `<div id='resultado'></div>`;
 }
